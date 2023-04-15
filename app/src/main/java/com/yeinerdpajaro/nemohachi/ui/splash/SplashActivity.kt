@@ -1,11 +1,60 @@
 package com.yeinerdpajaro.nemohachi.ui.splash
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.yeinerdpajaro.nemohachi.databinding.ActivitySplashBinding
+import com.yeinerdpajaro.nemohachi.ui.main.MainActivity
+import java.util.*
+import kotlin.concurrent.timerTask
 
 class SplashActivity : AppCompatActivity() {
+
+    private lateinit var splashBinding: ActivitySplashBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        splashBinding = ActivitySplashBinding.inflate(layoutInflater)
+        val view = splashBinding.root
+        setContentView(view)
+
+
+        val timer = Timer()
+        timer.schedule(timerTask {
+            val intent = Intent(this@SplashActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 2000
+        )
+    }
+    override fun onStart() {
+        super.onStart()
+        Log.d("onStart", "OK")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("onResume", "OK")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("onPause", "OK")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("onStop", "OK")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("onRestart", "OK")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("onDestroy", "OK")
     }
 }
