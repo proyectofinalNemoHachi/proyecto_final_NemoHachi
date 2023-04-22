@@ -12,13 +12,10 @@
         android:theme="@style/Theme.NemoHachi"
         tools:targetApi="31">
         <activity
-            android:name=".ui.main.adsActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name=".ui.main.TabbedActivity"
             android:exported="true"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar">
-            >
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/Theme.NemoHachi.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,8 +23,18 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.main.adsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar">
+
+
+        </activity>
+        <activity
             android:name=".ui.main.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

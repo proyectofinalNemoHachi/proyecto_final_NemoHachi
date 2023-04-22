@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">NemoHachi</string>
+    <string name="title_activity_tabbed">TabbedActivity</string>
+    <string name="anuncios">Anuncios</string>
+    <string name="adopcion">Adopción</string>
+    <string name="perdidos">Perdidos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
