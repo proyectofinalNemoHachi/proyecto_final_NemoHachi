@@ -8,8 +8,9 @@ import com.yeinerdpajaro.nemohachi.R
 
 private val TAB_TITLES = arrayOf(
     R.string.anuncios,
-    R.string.adopcion,
-    R.string.perdidos
+    R.string.perdidos,
+    R.string.adopcion
+
 )
 
 
@@ -19,9 +20,8 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         return when(position){
             0 -> return AnunciosFragment()
-            1 -> return AdopcionFragment()
-            else -> PerdidosFragment()
-
+            1 -> return PerdidosFragment()
+            else -> AdopcionFragment()
         }
     }
 
