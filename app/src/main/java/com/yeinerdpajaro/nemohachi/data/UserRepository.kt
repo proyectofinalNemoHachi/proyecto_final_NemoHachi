@@ -40,12 +40,7 @@ class UserRepository {
     }
 
     fun isSessionActive(): Boolean {
-        return if (auth==null){
-            false
-        }else{
-            true
-        }
-
+        return auth.currentUser != null
     }
 
 
