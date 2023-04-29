@@ -4,12 +4,22 @@
     <string name="anuncios">Anuncios</string>
     <string name="adopcion">Adopción</string>
     <string name="perdidos">Perdidos</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="adoption_text_view">¿Qué te gustaría adoptar?</string>
     <string name="dog_button">Perro</string>
     <string name="cat_button">Gato</string>
     <string name="other_button">Otros</string>
+    <string name="register_form">Crear cuenta con:</string>
+    <string name="facebook_button">Facebook</string>
+    <string name="twitter_button">Twitter</string>
+    <string name="google_button">Google</string>
+    <string name="email">Correo electrónico</string>
+    <string name="required_field">*Campo obligatorio</string>
+    <string name="password">Contraseña</string>
+    <string name="rep_password">Repita la contraseña</string>
+    <string name="register_button">Registrarse</string>
+    <string name="o">o</string>
+
 
 
 </resources>

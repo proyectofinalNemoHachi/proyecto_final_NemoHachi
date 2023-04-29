@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".ui.signup.SignUpActivity">
+
+
+
+        <ImageView
+            android:id="@+id/logo_image_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            app:srcCompat="@drawable/logo_NemoHachi"
+            android:contentDescription="@null" />
+        <TextView
+            android:id="@+id/tittle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register_form"
+            android:textAlignment="center"
+            android:textColor="#345E00"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/facebook_button"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/facebook_color"
+            android:text="@string/facebook_button"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            tools:ignore="DuplicateIds"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:id="@+id/twitter_button"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/twitter_color"
+            android:text="@string/twitter_button"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            tools:ignore="DuplicateIds"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:id="@+id/google_button"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/google_color"
+            android:text="@string/google_button"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            tools:ignore="DuplicateIds"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/tittle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/o"
+            android:textAlignment="center"
+            android:textColor="#345E00"
+            android:textSize="20sp" />
+
+
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_text_input_layaout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:helperText="@string/required_field"
+            app:startIconDrawable="@drawable/ic_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_input_text_layaout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            app:helperText="@string/required_field"
+            app:startIconDrawable="@drawable/ic_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rep_password_text_input_layaout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            app:helperText="@string/required_field"
+            app:startIconDrawable="@drawable/ic_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rep_password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rep_password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/register_button"
+            android:textAllCaps="false" />
+
+
+
+
+    </LinearLayout>
+</ScrollView>
