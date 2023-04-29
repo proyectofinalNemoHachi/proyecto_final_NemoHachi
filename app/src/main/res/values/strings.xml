@@ -19,7 +19,15 @@
     <string name="rep_password">Repita la contraseña</string>
     <string name="register_button">Registrarse</string>
     <string name="o">o</string>
+    <string name="log_in_with">Iniciar sesión con:</string>
+    <string name="access_button">Acceder</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="create_an_account_button">Crear cuenta</string>
 
+
+
+
+    create_an_account
 
 
 </resources>

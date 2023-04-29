@@ -26,10 +26,10 @@
             app:srcCompat="@drawable/logo"
             android:contentDescription="@null" />
         <TextView
-            android:id="@+id/create_an_account_text_view"
+            android:id="@+id/log_in_with_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/register_form"
+            android:text="@string/log_in_with"
             android:textAlignment="center"
             android:textColor="#345E00"
             android:textSize="20sp" />
@@ -67,6 +67,8 @@
             android:textColor="#FFFFFF"
             tools:ignore="DuplicateIds"
             android:layout_gravity="center_horizontal"/>
+
+
         <TextView
             android:id="@+id/or_text_view"
             android:layout_width="match_parent"
@@ -75,7 +77,7 @@
             android:textAlignment="center"
             android:textColor="#345E00"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_text_input_layaout"
@@ -112,30 +114,34 @@
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/rep_password_text_input_layaout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:endIconMode="password_toggle"
-            app:helperText="@string/required_field"
-            app:startIconDrawable="@drawable/ic_password">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/rep_password_edit_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/rep_password"
-                android:inputType="textPassword" />
-        </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:id="@+id/register_button"
+            android:id="@+id/access_button"
             android:layout_width="190dp"
             android:layout_height="60dp"
             android:layout_marginTop="8dp"
-            android:text="@string/register_button"
+            android:text="@string/access_button"
             android:textAllCaps="false"
             android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/forgot_password_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textAlignment="center"
+            android:textColor="#345E00"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/create_an_account_button"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/create_an_account_color"
+            android:text="@string/create_an_account_button"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"/>
+
 
 
 

@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "48236732409",
+    "project_id": "nemohachi",
+    "storage_bucket": "nemohachi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48236732409:android:d6da0c94b566a35f942728",
+        "android_client_info": {
+          "package_name": "com.yeinerdpajaro.misseriesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48236732409-dp70a255buggq80c3iokh3d2pukd2s4e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv7OAnbzcBO2JPFyDAi7IClgdcJynMr7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48236732409-dp70a255buggq80c3iokh3d2pukd2s4e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48236732409:android:62cf90aafc7e35d3942728",
+        "android_client_info": {
+          "package_name": "com.yeinerdpajaro.nemohachi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48236732409-dp70a255buggq80c3iokh3d2pukd2s4e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv7OAnbzcBO2JPFyDAi7IClgdcJynMr7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48236732409-dp70a255buggq80c3iokh3d2pukd2s4e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
