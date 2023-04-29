@@ -34,6 +34,7 @@ class SingInViewModel:ViewModel() {
                             "A network error (such as timeout, interrupted connection or unreachable host) has occurred." -> msg = "Revise su conexión de Internet"
                             "The email address is badly formatted." -> msg = "El correo electrónico está mal escrito"
                             "The password is invalid or the user does not have a password." -> msg = "La contraseña es invalida o el correo electrónico no tiene una contraseña"
+                            "There is no user record corresponding to this identifier. The user may have been deleted." -> msg = "No hay ningún registro de usuario correspondiente a este identificador. Es posible que el usuario haya sido eliminado."
                         }
                         _errorMsg.postValue(msg)
 

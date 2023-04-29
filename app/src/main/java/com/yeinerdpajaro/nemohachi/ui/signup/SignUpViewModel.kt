@@ -43,6 +43,7 @@ class SignUpViewModel : ViewModel() {
                                         "A network error (such as timeout, interrupted connection or unreachable host) has occurred." -> msg = "Revise su conexión de Internet"
                                         "The email address is already in use by another account." -> msg = "Ya existe una cuenta con este correo electrónico"
                                         "The email address is badly formatted." -> msg = "El correo electrónico está mal escrito"
+
                                     }
                                     _errorMsg.postValue(msg)
 
