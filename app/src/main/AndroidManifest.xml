@@ -25,7 +25,7 @@
             android:name=".ui.main.TabbedActivity"
             android:exported="true"
             android:label="@string/title_activity_tabbed"
-            android:theme="@style/Theme.NemoHachi.NoActionBar"></activity>
+            android:theme="@style/Theme.NemoHachi.NoActionBar" />
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true"
