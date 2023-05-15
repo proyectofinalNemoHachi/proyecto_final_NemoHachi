@@ -23,8 +23,10 @@
     <string name="access_button">Acceder</string>
     <string name="forgot_password">¿Olvidaste tu contraseña?</string>
     <string name="create_an_account_button">Crear cuenta</string>
-
-
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 
     create_an_account
