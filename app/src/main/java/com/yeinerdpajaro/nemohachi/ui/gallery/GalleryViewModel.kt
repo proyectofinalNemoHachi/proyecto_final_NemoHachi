@@ -1,13 +1,13 @@
-package com.yeinerdpajaro.nemohachi.ui.main.ui.notifications
+package com.yeinerdpajaro.nemohachi.ui.gallery
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class GalleryViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is gallery Fragment"
     }
     val text: LiveData<String> = _text
 }

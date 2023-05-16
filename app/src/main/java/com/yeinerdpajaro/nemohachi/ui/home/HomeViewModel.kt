@@ -1,4 +1,4 @@
-package com.yeinerdpajaro.nemohachi.ui.main.ui.home
+package com.yeinerdpajaro.nemohachi.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

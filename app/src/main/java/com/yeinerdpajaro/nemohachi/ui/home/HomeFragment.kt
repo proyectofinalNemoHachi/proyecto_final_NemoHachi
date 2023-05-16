@@ -1,10 +1,9 @@
-package com.yeinerdpajaro.nemohachi.ui.main.ui.home
+package com.yeinerdpajaro.nemohachi.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
@@ -36,6 +35,7 @@ class HomeFragment : Fragment() {
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = binding.tabs
         tabs.setupWithViewPager(viewPager)
+
         return root
     }
 

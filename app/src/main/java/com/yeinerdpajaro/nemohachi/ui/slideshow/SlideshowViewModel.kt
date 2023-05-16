@@ -1,13 +1,13 @@
-package com.yeinerdpajaro.nemohachi.ui.main.ui.dashboard
+package com.yeinerdpajaro.nemohachi.ui.slideshow
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class SlideshowViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+        value = "This is slideshow Fragment"
     }
     val text: LiveData<String> = _text
 }
