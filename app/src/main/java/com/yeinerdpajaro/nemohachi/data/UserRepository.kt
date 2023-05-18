@@ -43,5 +43,9 @@ class UserRepository {
         return auth.currentUser != null
     }
 
+    fun signOut() {
+        auth.signOut()
+    }
+
 
 }
