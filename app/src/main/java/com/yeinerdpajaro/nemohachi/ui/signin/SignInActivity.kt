@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.yeinerdpajaro.nemohachi.MainActivity
 import com.yeinerdpajaro.nemohachi.databinding.ActivitySignInBinding
-import com.yeinerdpajaro.nemohachi.ui.main.TabbedActivity
 import com.yeinerdpajaro.nemohachi.ui.signup.SignUpActivity
 
 class SignInActivity : AppCompatActivity() {

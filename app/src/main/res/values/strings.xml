@@ -25,8 +25,6 @@
     <string name="create_an_account_button">Crear cuenta</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="action_settings">Configuración</string>
     <string name="action_profile">Perfil</string>
     <string name="action_language">Idioma</string>
@@ -38,13 +36,5 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-
-    <string name="menu_home">Inicio</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-
-
-    create_an_account
-
 
 </resources>
