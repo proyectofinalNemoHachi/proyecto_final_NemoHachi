@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical">
+
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"
@@ -16,29 +18,45 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/adoption_text_view"
-            android:textColor="#000000"
-            android:textStyle="bold" />
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+        />
 
         <Button
             android:id="@+id/dog_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:text="@string/dog_button" />
+            android:layout_marginTop="20dp"
+            android:text="@string/dog_button"
+            android:textColor="@color/create_an_account_color"
+            android:textColorHint="@color/create_an_account_color"
+            android:backgroundTint="@color/green_dog"
+            android:textAllCaps="false"
+            />
 
         <Button
             android:id="@+id/cat_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:text="@string/cat_button" />
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/green_cat"
+            android:text="@string/cat_button"
+            android:textColor="@color/create_an_account_color"
+            android:textColorHint="@color/create_an_account_color" />
 
         <Button
             android:id="@+id/other_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:text="@string/other_button" />
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/green_other"
+            android:text="@string/other_button"
+            android:textColor="@color/create_an_account_color"
+            android:textColorHint="@color/create_an_account_color" />
 
     </LinearLayout>
 </ScrollView>

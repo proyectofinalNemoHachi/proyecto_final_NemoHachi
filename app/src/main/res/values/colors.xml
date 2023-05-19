@@ -11,5 +11,8 @@
     <color name="twitter_color">#00ACEE</color>
     <color name="google_color">#FF0000</color>
     <color name="create_an_account_color">#FFFFFF</color>
+    <color name="green_dog">#26981C</color>
+    <color name="green_cat">#3ECC31</color>
+    <color name="green_other">#B0E868</color>
 
 </resources>
