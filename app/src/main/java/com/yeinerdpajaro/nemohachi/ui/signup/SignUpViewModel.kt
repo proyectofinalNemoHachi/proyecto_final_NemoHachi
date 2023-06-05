@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.yeinerdpajaro.nemohachi.data.ResourceRemote
 import com.yeinerdpajaro.nemohachi.data.UserRepository
+import com.yeinerdpajaro.nemohachi.model.User
 import kotlinx.coroutines.launch
 
 class SignUpViewModel : ViewModel() {
@@ -18,8 +19,8 @@ class SignUpViewModel : ViewModel() {
     private val _isSuccessSignUp: MutableLiveData<Boolean> = MutableLiveData()
     val isSuccessSignUp: LiveData<Boolean> = _isSuccessSignUp
 
-    fun validateFields(email: String, password: String, repPassword: String) {
-        if (email.isEmpty() || password.isEmpty() || repPassword.isEmpty()) {
+    fun validateFields(email: String, password: String, repPassword: String, name: String) {
+        if (email.isEmpty() || password.isEmpty() || repPassword.isEmpty() || name.isEmpty()) {
             _errorMsg.value = "Debe digitar todos los campos"
         } else {
             if (password.length < 6) {
@@ -35,6 +36,14 @@ class SignUpViewModel : ViewModel() {
                         result.let { resourceRemote ->
                             when(resourceRemote){
                                 is ResourceRemote.Success ->{
+
+                                    //TODO crear el usuario en BD
+                                    val user = User(uid = resourceRemote.data,
+                                        name =name,
+                                        email = email
+                                    )
+                                    //TODO Almacenar el usuario en BD
+                                    createUser(user)
                                        _isSuccessSignUp.postValue(true)
                                 }
                                 is ResourceRemote.Error ->{
@@ -55,6 +64,30 @@ class SignUpViewModel : ViewModel() {
                         }
 
                     }
+                }
+            }
+        }
+
+    }
+
+    private fun createUser(user: User) {
+        viewModelScope.launch {
+            val result = userRepository.createUser(user)
+            result.let { resourceRemote ->
+                when(resourceRemote){
+                    is ResourceRemote.Success -> {
+                        _isSuccessSignUp.postValue(true)
+                        _errorMsg.postValue("¡Registro Exitoso!")
+                    }
+                    is ResourceRemote.Error -> {
+                        val msg = result.message
+                        _errorMsg.postValue(msg)
+
+                    }
+                    else -> {
+
+                    }
+
                 }
             }
         }

@@ -31,8 +31,10 @@ class SignUpActivity : AppCompatActivity() {
             val email = signUpBinding.emailEditText.text.toString()
             val password = signUpBinding.passwordEditText.text.toString()
             val repPassword = signUpBinding.repPasswordEditText.text.toString()
+            val name = signUpBinding.nameEditText.text.toString()
 
-            signUpViewModel.validateFields(email,password,repPassword)
+
+            signUpViewModel.validateFields(email,password,repPassword,name)
 
         }
     }
