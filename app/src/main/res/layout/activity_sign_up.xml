@@ -82,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:helperText="@string/required_field"
-            app:startIconDrawable="@drawable/baseline_person_24">
+            app:startIconDrawable="@drawable/ic_launcher_foreground">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name_edit_text"

@@ -1,5 +1,4 @@
 package com.yeinerdpajaro.nemohachi.ui.signin
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -33,6 +32,7 @@ class SignInActivity : AppCompatActivity() {
             startActivity(Intent(this,SignUpActivity::class.java))
         }
         signInBinding.accessButton.setOnClickListener {
+
             val email = signInBinding.emailEditText.text.toString()
             val password = signInBinding.passwordEditText.text.toString()
             signSingInViewModel.validateField(email,password)

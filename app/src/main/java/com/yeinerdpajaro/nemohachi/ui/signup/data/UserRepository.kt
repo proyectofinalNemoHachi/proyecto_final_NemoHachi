@@ -1,4 +1,4 @@
-package com.yeinerdpajaro.nemohachi.data
+package com.yeinerdpajaro.nemohachi.ui.signup.data
 
 import android.util.Log
 import com.google.firebase.FirebaseNetworkException
@@ -15,10 +15,10 @@ class UserRepository {
     private var auth: FirebaseAuth = Firebase.auth
 
     private var db = Firebase.firestore
-   suspend fun signUpUser(email: String, password: String): ResourceRemote<String?>{
+   suspend fun signUpUser(email: String, password: String): ResourceRemote<String?> {
        return try {
           val result =  auth.createUserWithEmailAndPassword(email, password).await()
-           ResourceRemote.Success(data= result.user?.uid)
+           ResourceRemote.Success(data = result.user?.uid)
 
        } catch (e: FirebaseAuthException){
            e.localizedMessage?.let{ Log.e("FirebaseAuthException",it)}
@@ -29,10 +29,10 @@ class UserRepository {
        }
    }
 
-    suspend fun signInUser(email: String, password: String): ResourceRemote<String?>{
+    suspend fun signInUser(email: String, password: String): ResourceRemote<String?> {
         return try {
             val result =  auth.signInWithEmailAndPassword(email, password).await()
-            ResourceRemote.Success(data= result.user?.uid)
+            ResourceRemote.Success(data = result.user?.uid)
 
         } catch (e: FirebaseAuthException){
             e.localizedMessage?.let{ Log.e("FirebaseAuthException",it)}
@@ -55,7 +55,7 @@ class UserRepository {
 
         return try {
             user.uid?.let { db.collection("users").document(it).set(user).await() }
-            ResourceRemote.Success(data= user.uid)
+            ResourceRemote.Success(data = user.uid)
 
         } catch (e: FirebaseAuthException){
             e.localizedMessage?.let{ Log.e("FirebaseAuthException",it)}

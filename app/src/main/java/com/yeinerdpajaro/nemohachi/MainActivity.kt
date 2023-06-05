@@ -8,7 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.appcompat.app.AppCompatActivity
-import com.yeinerdpajaro.nemohachi.data.UserRepository
+import com.yeinerdpajaro.nemohachi.ui.signup.data.UserRepository
 import com.yeinerdpajaro.nemohachi.databinding.ActivityMainBinding
 import com.yeinerdpajaro.nemohachi.ui.signin.SignInActivity
 

@@ -1,4 +1,4 @@
-package com.yeinerdpajaro.nemohachi.data
+package com.yeinerdpajaro.nemohachi.ui.signup.data
 
 sealed class ResourceRemote<T> (
     var data: T? = null,
@@ -11,7 +11,7 @@ sealed class ResourceRemote<T> (
 
     class Loaging<T>(message: String = "") : ResourceRemote<T>(message = message,status = Status.Loading)
 
-    class Error<T>(errorCode: Int? = null, message: String? = null) : ResourceRemote<T>(errorCode = errorCode, message = message,status =Status.Error)
+    class Error<T>(errorCode: Int? = null, message: String? = null) : ResourceRemote<T>(errorCode = errorCode, message = message,status = Status.Error)
 
 }
 enum class Status{

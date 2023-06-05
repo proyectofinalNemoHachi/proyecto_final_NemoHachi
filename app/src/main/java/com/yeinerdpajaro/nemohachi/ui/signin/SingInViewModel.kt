@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.yeinerdpajaro.nemohachi.data.ResourceRemote
-import com.yeinerdpajaro.nemohachi.data.UserRepository
+import com.yeinerdpajaro.nemohachi.ui.signup.data.ResourceRemote
+import com.yeinerdpajaro.nemohachi.ui.signup.data.UserRepository
 import kotlinx.coroutines.launch
 
 class SingInViewModel:ViewModel() {
