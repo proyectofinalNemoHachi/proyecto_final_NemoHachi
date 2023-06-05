@@ -5,6 +5,7 @@ import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthException
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.yeinerdpajaro.nemohachi.model.User
@@ -47,6 +48,10 @@ class UserRepository {
         return auth.currentUser != null
     }
 
+    fun getUIDCurrentUser() : String? {
+        return auth.currentUser?.uid
+    }
+
     fun signOut() {
         auth.signOut()
     }
@@ -65,6 +70,21 @@ class UserRepository {
             ResourceRemote.Error(message = e.localizedMessage)
         }
 
+
+
+    }
+
+    suspend fun loadUserInfo(): ResourceRemote<QuerySnapshot> {
+        return try {
+           val result = db.collection("users").get().await()
+            ResourceRemote.Success(data = result)
+        } catch (e: FirebaseAuthException){
+            e.localizedMessage?.let{ Log.e("FirebaseAuthException",it)}
+            ResourceRemote.Error(message = e.localizedMessage)
+        }catch(e:FirebaseNetworkException){
+            e.localizedMessage?.let{ Log.e("FirebaseAuthException",it)}
+            ResourceRemote.Error(message = e.localizedMessage)
+        }
 
 
     }

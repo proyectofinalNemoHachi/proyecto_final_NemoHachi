@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".ui.signup.SignUpActivity">
+        <TextView
+            android:id="@+id/create_an_account_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_language"
+            android:textAlignment="center"
+            android:textColor="#345E00"
+            android:textSize="20sp" />
+
+
+        <RadioGroup
+            android:id="@+id/select_language_radio_button_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/english_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/english_language"
+                android:textSize="20sp"/>
+
+            <RadioButton
+                android:id="@+id/german_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/german_language"
+                android:textSize="20sp"/>
+            <RadioButton
+                android:id="@+id/french_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/french_language"
+                android:textSize="20sp"/>
+            <RadioButton
+                android:id="@+id/italian_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/italian_language"
+                android:textSize="20sp"/>
+            <RadioButton
+                android:id="@+id/portuguese_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/portuguese_language"
+                android:textSize="20sp"/>
+            <RadioButton
+                android:id="@+id/spanish_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/spanish_language"
+                android:textSize="20sp"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="@string/accept_button"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            android:textColorHint="@color/purple_500" />
+
+    </LinearLayout>
+</ScrollView>

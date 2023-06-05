@@ -10,6 +10,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.appcompat.app.AppCompatActivity
 import com.yeinerdpajaro.nemohachi.ui.signup.data.UserRepository
 import com.yeinerdpajaro.nemohachi.databinding.ActivityMainBinding
+import com.yeinerdpajaro.nemohachi.ui.language.LanguageActivity
+import com.yeinerdpajaro.nemohachi.ui.notifications.NotificationActivity
+import com.yeinerdpajaro.nemohachi.ui.profile.ProfileActivity
 import com.yeinerdpajaro.nemohachi.ui.signin.SignInActivity
 
 
@@ -60,15 +63,15 @@ class MainActivity : AppCompatActivity() {
               // Handle item selection
         return when (item.itemId) {
             R.id.action_profile -> {
-                //newGame()
+                startActivity(Intent(this@MainActivity, ProfileActivity::class.java))
                 true
             }
             R.id.action_language -> {
-                //showHelp()
+                startActivity(Intent(this@MainActivity, LanguageActivity::class.java))
                 true
             }
             R.id.action_notification -> {
-                //showHelp()
+                startActivity(Intent(this@MainActivity, NotificationActivity::class.java))
                 true
             }
             R.id.action_help -> {

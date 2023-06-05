@@ -37,5 +37,24 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="name">Nombre</string>
+    <string name="description_text_view">Descripción</string>
+    <string name="time">Hora</string>
+    <string name="change_password">Cambiar la contraseña</string>
+    <string name="delete_button">Eliminar la cuenta</string>
+    <string name="change_name">Cambiar el nombre</string>
+    <string name="accept_button">Aceptar</string>
+    <string name="select_language">Seleccione el idioma:</string>
+    <string name="english_language">Inglés</string>
+    <string name="german_language">Alemán</string>
+    <string name="french_language">Francés</string>
+    <string name="portuguese_language">Portugués</string>
+    <string name="spanish_language">Español</string>
+    <string name="italian_language">Italiano</string>
+    <string name="vibration_mode">Modo vibrador</string>
+    <string name="change_tone">Chambiar tono</string>
+    <string name="remove_notifications">Quitar notificaciones\n</string>
+    <string name="save_changes">Guardar cambios</string>
+    <string name="email_address">Correo</string>
+
 
 </resources>

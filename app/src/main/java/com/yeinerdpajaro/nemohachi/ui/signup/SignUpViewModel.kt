@@ -12,6 +12,8 @@ import kotlinx.coroutines.launch
 class SignUpViewModel : ViewModel() {
 
     private val userRepository = UserRepository()
+
+
     private val _errorMsg: MutableLiveData<String?> = MutableLiveData()
     val errorMsg: MutableLiveData<String?> = _errorMsg
 
