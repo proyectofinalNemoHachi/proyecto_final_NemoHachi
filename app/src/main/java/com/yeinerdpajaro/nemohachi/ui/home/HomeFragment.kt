@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.yeinerdpajaro.nemohachi.databinding.FragmentHomeBinding
@@ -25,10 +26,16 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val homeViewModel =
-            ViewModelProvider(this)[HomeViewModel::class.java]
+            ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        binding.newAnuncioFloatingActionButton.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionNavHomeToNewAnuncioFragment())
+        }
+
+
 
         val sectionsPagerAdapter = SectionsPagerAdapter(requireActivity(), parentFragmentManager)
         val viewPager: ViewPager = binding.viewPager

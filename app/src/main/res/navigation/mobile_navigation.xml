@@ -9,9 +9,20 @@
         android:id="@+id/nav_home"
         android:name="com.yeinerdpajaro.nemohachi.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
-
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_newAnuncioFragment"
+            app:destination="@id/newAnuncioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newAnuncioFragment"
+        android:name="com.yeinerdpajaro.nemohachi.ui.newAnuncio.NewAnuncioFragment"
+        android:label="fragment_new_anuncio"
+        tools:layout="@layout/fragment_new_anuncio" />
+    <fragment
+        android:id="@+id/anunciosFragment"
+        android:name="com.yeinerdpajaro.nemohachi.ui.main.AnunciosFragment"
+        android:label="AnunciosFragment" />
 
 
 </navigation>

@@ -55,6 +55,13 @@
     <string name="remove_notifications">Quitar notificaciones\n</string>
     <string name="save_changes">Guardar cambios</string>
     <string name="email_address">Correo</string>
+    <string name="cat_pet">Gato</string>
+    <string name="dog_pet">Perro</string>
+    <string name="other_pet">Otros</string>
+    <string name="pet_select">Selecciona el tipo de mascota</string>
+    <string name="comment">Comentario</string>
+
+
 
 
 </resources>

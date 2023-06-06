@@ -6,51 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/image_profile_view"
-        android:layout_width="45sp"
-        android:layout_height="45sp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="28dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/anuncios_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:listitem="@layout/card_view_anuncio_item" />
 
-    <TextView
-        android:id="@+id/text_view_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/name"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/image_profile_view"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text_view_time"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/time"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/image_profile_view"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_name" />
-
-    <TextView
-        android:id="@+id/text_view_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="@string/description_text_view"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toEndOf="@+id/text_view_time"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,36 +30,43 @@ class SignUpViewModel : ViewModel() {
             } else {
                 if (password != repPassword) {
                     _errorMsg.value = "Las contraseñas deben ser iguales"
-                }
-                else {
+                } else {
 
                     viewModelScope.launch {
-                       val result = userRepository.signUpUser(email, password)
+                        val result = userRepository.signUpUser(email, password)
                         result.let { resourceRemote ->
-                            when(resourceRemote){
-                                is ResourceRemote.Success ->{
+                            when (resourceRemote) {
+                                is ResourceRemote.Success -> {
 
                                     //TODO crear el usuario en BD
-                                    val user = User(uid = resourceRemote.data,
-                                        name =name,
+                                    val user = User(
+                                        uid = resourceRemote.data,
+                                        name = name,
                                         email = email
                                     )
                                     //TODO Almacenar el usuario en BD
                                     createUser(user)
-                                       _isSuccessSignUp.postValue(true)
+                                    _isSuccessSignUp.postValue(true)
                                 }
-                                is ResourceRemote.Error ->{
+
+                                is ResourceRemote.Error -> {
                                     var msg = resourceRemote.message
-                                    when(resourceRemote.message){
-                                        "A network error (such as timeout, interrupted connection or unreachable host) has occurred." -> msg = "Revise su conexión de Internet"
-                                        "The email address is already in use by another account." -> msg = "Ya existe una cuenta con este correo electrónico"
-                                        "The email address is badly formatted." -> msg = "El correo electrónico está mal escrito"
+                                    when (resourceRemote.message) {
+                                        "A network error (such as timeout, interrupted connection or unreachable host) has occurred." -> msg =
+                                            "Revise su conexión de Internet"
+
+                                        "The email address is already in use by another account." -> msg =
+                                            "Ya existe una cuenta con este correo electrónico"
+
+                                        "The email address is badly formatted." -> msg =
+                                            "El correo electrónico está mal escrito"
 
                                     }
                                     _errorMsg.postValue(msg)
 
                                 }
-                                else ->{
+
+                                else -> {
 
                                 }
                             }
@@ -76,16 +83,18 @@ class SignUpViewModel : ViewModel() {
         viewModelScope.launch {
             val result = userRepository.createUser(user)
             result.let { resourceRemote ->
-                when(resourceRemote){
+                when (resourceRemote) {
                     is ResourceRemote.Success -> {
                         _isSuccessSignUp.postValue(true)
                         _errorMsg.postValue("¡Registro Exitoso!")
                     }
+
                     is ResourceRemote.Error -> {
                         val msg = result.message
                         _errorMsg.postValue(msg)
 
                     }
+
                     else -> {
 
                     }
