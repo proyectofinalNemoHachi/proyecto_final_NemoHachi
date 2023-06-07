@@ -1,52 +1,48 @@
-package com.yeinerdpajaro.nemohachi.ui.newAnuncio
+package com.yeinerdpajaro.nemohachi.forms.newannouncement
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.yeinerdpajaro.nemohachi.model.Anuncio
-import com.yeinerdpajaro.nemohachi.ui.signup.data.AnuncioRepository
-import com.yeinerdpajaro.nemohachi.ui.signup.data.ResourceRemote
-import com.yeinerdpajaro.nemohachi.ui.signup.data.UserRepository
+import com.yeinerdpajaro.nemohachi.data.AnunciosRepository
+import com.yeinerdpajaro.nemohachi.data.ResourceRemote
+import com.yeinerdpajaro.nemohachi.model.Anuncios
 import kotlinx.coroutines.launch
 
-class NewAnuncioViewModel : ViewModel() {
-
-    private val anuncioRepository = AnuncioRepository()
+class NewAnunciosViewModel : ViewModel() {
+    private val anunciosRepository = AnunciosRepository()
     private val _errorMsg: MutableLiveData<String?> = MutableLiveData()
     val errorMsg: MutableLiveData<String?> = _errorMsg
 
-    private val _createAnuncioSucces: MutableLiveData<String?> = MutableLiveData()
-    val createAnuncioSuccess: LiveData<String?> = _createAnuncioSucces
+    private val _createAnunciosSuccess: MutableLiveData<String?> = MutableLiveData()
+    val createAnunciosSuccess: LiveData<String?> = _createAnunciosSuccess
 
     fun validateData(
         name: String,
         comment: String,
-        isCatSelected: Boolean,
-        isDogSelected: Boolean,
-        isOtherSelected: Boolean
-    ) {
+
+        ) {
         if (name.isEmpty() || comment.isEmpty()) {
             _errorMsg.value = "Debe digitar todos los campos"
         } else {
 
             viewModelScope.launch {
-                val anuncio = Anuncio(
+                val anuncios = Anuncios(
                     name = name,
                     comment = comment,
-                    isCatSelected = isCatSelected,
-                    isDogSelected = isDogSelected,
-                    isOtherSelected = isOtherSelected
-                )
-                val result = anuncioRepository.saveSerie(anuncio)
+                    )
+                val result = anunciosRepository.saveAnuncio(anuncios)
                 result.let { resourceRemote ->
                     when (resourceRemote) {
                         is ResourceRemote.Success -> {
                             _errorMsg.postValue("Anuncio guardado")
-                            _createAnuncioSucces.postValue(resourceRemote.data)
+                            _createAnunciosSuccess.postValue(resourceRemote.data)
                         }
 
                         is ResourceRemote.Error -> {
+
+                            val msg = resourceRemote.message
+                            _errorMsg.postValue(msg)
 
                         }
 
@@ -60,5 +56,4 @@ class NewAnuncioViewModel : ViewModel() {
         }
 
     }
-
 }

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.ViewModelProvider
-import com.yeinerdpajaro.nemohachi.MainActivity
+import com.yeinerdpajaro.nemohachi.ui.main.MainActivity
 import com.yeinerdpajaro.nemohachi.databinding.ActivitySplashBinding
 import com.yeinerdpajaro.nemohachi.ui.signin.SignInActivity
 import java.util.*

@@ -1,4 +1,4 @@
-package com.yeinerdpajaro.nemohachi
+package com.yeinerdpajaro.nemohachi.ui.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.appcompat.app.AppCompatActivity
-import com.yeinerdpajaro.nemohachi.ui.signup.data.UserRepository
+import com.yeinerdpajaro.nemohachi.R
+import com.yeinerdpajaro.nemohachi.data.UserRepository
 import com.yeinerdpajaro.nemohachi.databinding.ActivityMainBinding
 import com.yeinerdpajaro.nemohachi.ui.language.LanguageActivity
 import com.yeinerdpajaro.nemohachi.ui.notifications.NotificationActivity

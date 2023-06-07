@@ -17,7 +17,7 @@
     <string name="required_field">*Campo obligatorio</string>
     <string name="password">Contraseña</string>
     <string name="rep_password">Repita la contraseña</string>
-    <string name="register_button">Registrarse</string>
+    <string name="register_button">Publicar</string>
     <string name="o">o</string>
     <string name="log_in_with">Iniciar sesión con:</string>
     <string name="access_button">Acceder</string>
@@ -60,8 +60,15 @@
     <string name="other_pet">Otros</string>
     <string name="pet_select">Selecciona el tipo de mascota</string>
     <string name="comment">Comentario</string>
-
-
+    <string name="pet_name">Nombre de tu mascota</string>
+    <string name="city_name">ciudad</string>
+    <string name="location_status">Estado de la ubicación</string>
+    <string name="city">Ciudad</string>
+    <string name="add_comment">Comentar</string>
+    <string name="pet_type">Tipo de mascota</string>
+    <string name="like">Me gusta</string>
+    <string name="adoption_status">Estado de la adopción</string>
+    <string name="comments">Comentar</string>
 
 
 </resources>

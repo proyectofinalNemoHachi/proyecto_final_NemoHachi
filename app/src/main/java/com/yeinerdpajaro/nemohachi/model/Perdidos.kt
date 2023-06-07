@@ -1,9 +1,10 @@
 package com.yeinerdpajaro.nemohachi.model
 
-data class Anuncio (
+class Perdidos (
 
     var id: String? = null,
-    var name: String? = null,
+    var petname: String? = null,
+    var city: String?= null,
     var comment: String? = null,
     var urlPicture: String? = null,
     var isCatSelected: Boolean = false,

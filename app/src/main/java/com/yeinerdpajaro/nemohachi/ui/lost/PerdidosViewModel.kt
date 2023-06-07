@@ -1,45 +1,45 @@
-package com.yeinerdpajaro.nemohachi.ui.main
+package com.yeinerdpajaro.nemohachi.ui.lost
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.firestore.ktx.toObject
-import com.yeinerdpajaro.nemohachi.model.Anuncio
-import com.yeinerdpajaro.nemohachi.ui.signup.data.AnuncioRepository
-import com.yeinerdpajaro.nemohachi.ui.signup.data.ResourceRemote
+import com.yeinerdpajaro.nemohachi.data.PerdidosRepository
+import com.yeinerdpajaro.nemohachi.data.ResourceRemote
+import com.yeinerdpajaro.nemohachi.model.Perdidos
 import kotlinx.coroutines.launch
 
-class AnunciosViewModel : ViewModel() {
+class PerdidosViewModel : ViewModel() {
 
-    private val anunciosRepository = AnuncioRepository()
+    private val perdidosRepository = PerdidosRepository()
 
-    private var anuncioList: ArrayList<Anuncio> = ArrayList()
+   private var perdidosList: ArrayList<Perdidos> = ArrayList()
 
-    private val _anunciosList: MutableLiveData<ArrayList<Anuncio>> = MutableLiveData()
-    val anunciosList: LiveData<ArrayList<Anuncio>> = _anunciosList
+    private val _perdidosList: MutableLiveData<ArrayList<Perdidos>> = MutableLiveData()
+    val perdidoList: LiveData<ArrayList<Perdidos>> = _perdidosList
 
     private val _errorMsg: MutableLiveData<String?> = MutableLiveData()
     val errorMsg: MutableLiveData<String?> = _errorMsg
 
-    fun loadAnuncios() {
-        anuncioList.clear()
+
+    fun loadPerdidos() {
+        perdidosList.clear()
         viewModelScope.launch {
-            val result = anunciosRepository.loadSeries()
+            val result = perdidosRepository.loadPerdidos()
             result.let { resourceRemote ->
                 when (resourceRemote) {
                     is ResourceRemote.Success -> {
                         resourceRemote.data?.documents?.forEach { document ->
-                            val anuncio = document.toObject<Anuncio>()
-                            anuncio?.let { anuncioList.add(it) }
+                            val perdidos = document.toObject<Perdidos>()
+                            perdidos?.let { perdidosList.add(it) }
                         }
-                        _anunciosList.postValue(anuncioList)
+                        _perdidosList.postValue(perdidosList)
                     }
 
                     is ResourceRemote.Error -> {
                         val msg = result.message
                         _errorMsg.postValue(msg)
-
                     }
 
                     else -> {
@@ -47,7 +47,7 @@ class AnunciosViewModel : ViewModel() {
                     }
                 }
             }
+
         }
     }
-
 }

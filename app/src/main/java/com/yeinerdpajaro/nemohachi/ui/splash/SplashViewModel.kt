@@ -3,7 +3,7 @@ package com.yeinerdpajaro.nemohachi.ui.splash
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.yeinerdpajaro.nemohachi.ui.signup.data.UserRepository
+import com.yeinerdpajaro.nemohachi.data.UserRepository
 
 class SplashViewModel : ViewModel() {
 

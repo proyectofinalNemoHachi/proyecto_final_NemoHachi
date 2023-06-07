@@ -1,4 +1,4 @@
-package com.yeinerdpajaro.nemohachi.ui.signup.data
+package com.yeinerdpajaro.nemohachi.data
 
 import android.util.Log
 import com.google.firebase.FirebaseNetworkException
@@ -9,22 +9,21 @@ import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.yeinerdpajaro.nemohachi.model.Anuncio
+import com.yeinerdpajaro.nemohachi.model.Anuncios
 import kotlinx.coroutines.tasks.await
 
-class AnuncioRepository {
+class AnunciosRepository {
 
     private var db = Firebase.firestore
     private var auth: FirebaseAuth = Firebase.auth
-    suspend fun saveSerie(anuncio: Anuncio): ResourceRemote<String?> {
+    suspend fun saveAnuncio(anuncios: Anuncios): ResourceRemote<String?> {
         return try {
             val uid = auth.currentUser?.uid
             val path  = uid?.let { db.collection("announcements")}
             val documentAnuncio = path?.document()
-            anuncio.id = documentAnuncio?.id
-            anuncio.id?.let{path?.document(it)?.set(anuncio)?.await()}
-            ResourceRemote.Success(data = anuncio.id)
-
+            anuncios.id = documentAnuncio?.id
+            anuncios?.id?.let{path?.document(it)?.set(anuncios)?.await()}
+            ResourceRemote.Success(data = anuncios.id)
         } catch (e: FirebaseFirestoreException){
             e.localizedMessage?.let{ Log.e("FirebaseAuthException",it)}
             ResourceRemote.Error(message = e.localizedMessage)
@@ -34,9 +33,9 @@ class AnuncioRepository {
         }
     }
 
-    suspend fun loadSeries(): ResourceRemote<QuerySnapshot?> {
+    suspend fun loadAnuncios(): ResourceRemote<QuerySnapshot?> {
         return try {
-            val docRef = auth.uid?.let { db.collection("announcements").document(it).collection("announcements")}
+            val docRef = auth.uid?.let { db.collection("announcements")}
             val result = docRef?.get()?.await()
             ResourceRemote.Success(data = result)
         } catch (e: FirebaseAuthException){

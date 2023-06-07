@@ -6,8 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.firestore.ktx.toObject
 import com.yeinerdpajaro.nemohachi.model.User
-import com.yeinerdpajaro.nemohachi.ui.signup.data.ResourceRemote
-import com.yeinerdpajaro.nemohachi.ui.signup.data.UserRepository
+import com.yeinerdpajaro.nemohachi.data.ResourceRemote
+import com.yeinerdpajaro.nemohachi.data.UserRepository
 import kotlinx.coroutines.launch
 
 class ProfileViewModel : ViewModel() {

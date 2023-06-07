@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.yeinerdpajaro.nemohachi.R
+import com.yeinerdpajaro.nemohachi.ui.announcement.AnunciosFragment
+import com.yeinerdpajaro.nemohachi.ui.lost.PerdidosFragment
 
 private val TAB_TITLES = arrayOf(
     R.string.anuncios,

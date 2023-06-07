@@ -1,4 +1,4 @@
-package com.yeinerdpajaro.nemohachi.ui.signup.data
+package com.yeinerdpajaro.nemohachi.data
 
 sealed class ResourceRemote<T> (
     var data: T? = null,

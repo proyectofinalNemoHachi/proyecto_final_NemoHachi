@@ -1,4 +1,4 @@
-package com.yeinerdpajaro.nemohachi.ui.signup.data
+package com.yeinerdpajaro.nemohachi.data
 
 import android.util.Log
 import com.google.firebase.FirebaseNetworkException

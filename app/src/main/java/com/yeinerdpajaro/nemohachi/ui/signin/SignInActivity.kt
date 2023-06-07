@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.yeinerdpajaro.nemohachi.MainActivity
+import com.yeinerdpajaro.nemohachi.ui.main.MainActivity
 import com.yeinerdpajaro.nemohachi.databinding.ActivitySignInBinding
 import com.yeinerdpajaro.nemohachi.ui.signup.SignUpActivity
 
@@ -24,7 +24,7 @@ class SignInActivity : AppCompatActivity() {
             Toast.makeText(applicationContext,errorMsg, Toast.LENGTH_SHORT).show()
         }
         signSingInViewModel.isSuccessSignIn.observe(this){errosMsg->
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
