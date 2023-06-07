@@ -69,6 +69,13 @@
     <string name="like">Me gusta</string>
     <string name="adoption_status">Estado de la adopción</string>
     <string name="comments">Comentar</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="help_center_text">Centro de ayuda</string>
+    <string name="privacy_politics">Términos y políticas de privacidad</string>
+    <string name="contact_us_text"> Contáctenos en: </string>
+    <string name="cell_phone_number_text">+57 3116789403</string>
+    <string name="address_text">Calle 34 #67-33</string>
+    <string name="email_text">nemohachi@gmail.com</string>
 
 
 </resources>

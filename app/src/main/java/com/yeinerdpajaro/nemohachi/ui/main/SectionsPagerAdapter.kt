@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.yeinerdpajaro.nemohachi.R
+import com.yeinerdpajaro.nemohachi.ui.adoption.AdopcionFragment
 import com.yeinerdpajaro.nemohachi.ui.announcement.AnunciosFragment
 import com.yeinerdpajaro.nemohachi.ui.lost.PerdidosFragment
 

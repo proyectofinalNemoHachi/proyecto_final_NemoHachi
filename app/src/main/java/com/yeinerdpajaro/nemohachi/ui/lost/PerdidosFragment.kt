@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.yeinerdpajaro.nemohachi.MapsActivity
 import com.yeinerdpajaro.nemohachi.databinding.FragmentPerdidosBinding
 import com.yeinerdpajaro.nemohachi.forms.newlost.NewPerdidosActivity
 import com.yeinerdpajaro.nemohachi.model.Perdidos
@@ -36,6 +37,11 @@ class PerdidosFragment : Fragment() {
 
         binding.newlostFloatingActionButton.setOnClickListener {
             val intent = Intent(requireContext(), NewPerdidosActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.newlostMapsFloatingActionButton.setOnClickListener {
+            val intent = Intent(requireContext(), MapsActivity::class.java)
             startActivity(intent)
         }
 

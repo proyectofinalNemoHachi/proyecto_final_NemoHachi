@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.yeinerdpajaro.nemohachi.R
 import com.yeinerdpajaro.nemohachi.data.UserRepository
 import com.yeinerdpajaro.nemohachi.databinding.ActivityMainBinding
+import com.yeinerdpajaro.nemohachi.ui.helptext.HelpTextActivity
 import com.yeinerdpajaro.nemohachi.ui.language.LanguageActivity
 import com.yeinerdpajaro.nemohachi.ui.notifications.NotificationActivity
 import com.yeinerdpajaro.nemohachi.ui.profile.ProfileActivity
@@ -76,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_help -> {
-                //showHelp()
+                startActivity(Intent(this@MainActivity, HelpTextActivity::class.java))
                 true
             }
             R.id.action_signout -> {
